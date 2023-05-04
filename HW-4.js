@@ -8,7 +8,7 @@ while (a < 2) {
 
 //2 задание
 /*let b = 1;
- 
+
 while (b < 6) {
     console.log(b);
     b++;
