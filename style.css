@@ -1,0 +1,424 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.top {
+  width: 1440px;
+  height: 1024px;
+}
+
+.header {
+  background-image: url("img/logo-games.jpg");
+  height: 1024px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.header__heading {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 78px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  padding-top: 217px;
+  margin-left: 120px;
+}
+.header__text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 32px;
+  display: block;
+  align-items: center;
+  color: #FFFFFF;
+  margin-top: 32px;
+  margin-left: 120px;
+}
+.header__click {
+  width: 234.06px;
+  height: 48.6px;
+  background: #9C0332;
+  border-radius: 30px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  margin-top: 44px;
+  margin-left: 120px;
+  margin-bottom: 493px;
+}
+.header__click:hover {
+  background: #EB443F;
+}
+
+.games {
+  background-image: url("img/bg-games.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  gap: 32px;
+  padding-top: 128px;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-bottom: 128px;
+}
+.games__game1 {
+  background-image: url("img/game1.jpg");
+  width: 379px;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 16px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  display: flex;
+  align-items: flex-end;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.games__game1:hover {
+  border: 3px solid #44D2FF;
+  border-radius: 16px;
+}
+.games__game2 {
+  background-image: url("img/game2.jpg");
+  width: 379px;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 16px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  display: flex;
+  align-items: flex-end;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.games__game2:hover {
+  border: 3px solid #44D2FF;
+  border-radius: 16px;
+}
+.games__game3 {
+  background-image: url("img/game3.jpg");
+  width: 379px;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 16px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  display: flex;
+  align-items: flex-end;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.games__game3:hover {
+  border: 3px solid #44D2FF;
+  border-radius: 16px;
+}
+
+.seasons-year {
+  background-image: url("img/bg-year.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 135px;
+  padding-top: 233px;
+}
+
+.year {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+.year__time {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  margin-left: 120px;
+}
+.year__time-text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  margin-left: 120px;
+  width: 584px;
+}
+.year__button {
+  width: 234.06px;
+  height: 48.6px;
+  background: #9C0332;
+  border-radius: 30px;
+  margin-left: 120px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  justify-content: center;
+}
+.year__button:hover {
+  background: #EB443F;
+}
+
+.logo-game {
+  background-image: url("img/bg-game.png");
+  height: 333px;
+  background-repeat: no-repeat;
+  padding-top: 233px;
+  margin-right: 116px;
+}
+
+.seasons-words {
+  background-image: url("img/bg-year.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 135px;
+  padding-top: 233px;
+}
+
+.logo-game-words {
+  background-image: url("img/bg-game-words.png");
+  height: 322px;
+  background-repeat: no-repeat;
+  padding-top: 239px;
+  margin-bottom: 239px;
+  margin-left: 120px;
+}
+
+.words {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+.words__remember {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+}
+.words__remember-text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  width: 584px;
+}
+.words__button {
+  width: 234.06px;
+  height: 48.6px;
+  background: #9C0332;
+  border-radius: 30px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  justify-content: center;
+}
+.words__button:hover {
+  background: #EB443F;
+}
+
+@media (max-width: 767px) {
+  .top {
+    width: 375px;
+    height: 735px;
+  }
+  .header__heading {
+    font-size: 32px;
+    padding-top: 238px;
+    margin-left: 16px;
+    line-height: 39px;
+    text-align: center;
+  }
+  .header__text {
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 32px;
+    margin-left: 16px;
+    margin-right: 16px;
+    text-align: center;
+  }
+  .header__click {
+    margin-top: 32px;
+    margin-left: 70px;
+    margin-bottom: 238px;
+  }
+  .br {
+    display: none;
+  }
+  .games {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .games__game1 {
+    width: 343px;
+    height: 300px;
+    margin-top: 128px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .games__game2 {
+    width: 343px;
+    height: 300px;
+    margin-top: 32px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .games__game3 {
+    width: 343px;
+    height: 300px;
+    margin-top: 32px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .seasons-year {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .year__time {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: 66px;
+    margin-top: 51px;
+  }
+  .year__time-text {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: 16px;
+    width: 343px;
+  }
+  .year__button {
+    width: 234.06px;
+    height: 48.6px;
+    background: #9C0332;
+    border-radius: 30px;
+    margin-left: 70px;
+  }
+  .year__button:hover {
+    background: #EB443F;
+  }
+  .logo-game {
+    width: 344px;
+    height: 236px;
+    background-size: cover;
+    margin-top: 64px;
+    margin-left: 16px;
+    margin-bottom: 85px;
+    margin-right: 16px;
+    padding-top: 0;
+  }
+  .seasons-words {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 32px;
+    padding-top: 0;
+  }
+  .logo-game-words {
+    width: 344px;
+    height: 236px;
+    background-size: cover;
+    margin-top: 64px;
+    margin-left: 16px;
+    margin-bottom: 85px;
+    margin-right: 16px;
+    padding-top: 0;
+  }
+  .words__remember {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: 66px;
+    margin-top: 51px;
+  }
+  .words__remember-text {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: 16px;
+    width: 343px;
+  }
+  .words__button {
+    width: 234.06px;
+    height: 48.6px;
+    background: #9C0332;
+    border-radius: 30px;
+    margin-left: 70px;
+  }
+  .words__button:hover {
+    background: #EB443F;
+  }
+}/*# sourceMappingURL=style.css.map */
