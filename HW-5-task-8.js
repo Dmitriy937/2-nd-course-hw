@@ -6,6 +6,8 @@ function monthOfYear() {
         return 'Время года: ' + season[Math.floor(month/3)];
     } else if (Number.isNaN(month)) {
         return 'Вы ввели неверное значение';
+    } else {
+        return 'В году всего 12 месяцев, повтори попытку))';
     }
 }
 

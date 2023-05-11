@@ -11,12 +11,12 @@ function min(a, b) {
 }
 
 let result = min(a, b);
-alert(result);*/
+alert(result);/*
 
 //2 задание
 /*let a = prompt('Введите число');
 
-function even_or_odd(a) {
+function evenОrОdd(a) {
     if (a % 2 === 0) {
         return 'Число четное';
     } else {
@@ -24,7 +24,7 @@ function even_or_odd(a) {
     }
 }
 
-alert(even_or_odd(a));*/
+alert(evenОrОdd(a));*/
 
 //3 задание
 /*let a = Number(prompt('Введите любое число'));
@@ -55,10 +55,10 @@ alert(year(a));*/
 let b = Number(prompt('Введите второе число'));
 
 function correctNumbers(a, b) {
-    if (Number(a, b)) {
-        return(a * b);
-    } else if (Number.isNaN(a, b)) {
+    if (Number.isNaN(a, b)) {
         return 'Одно или оба значения не являются числом';
+    } else {
+        return (a * b);
     }
 }
 
