@@ -51,18 +51,20 @@ function year(a) {
 alert(year(a));*/
 
 //5 задание
-/*let a = Number(prompt('Введите первое число'));
+let a = Number(prompt('Введите первое число'));
 let b = Number(prompt('Введите второе число'));
 
 function correctNumbers(a, b) {
-    if (Number.isNaN(a, b)) {
+    if (Number.isNaN(a)) {
+        return 'Одно или оба значения не являются числом';
+    } else if (Number.isNaN(b)) {
         return 'Одно или оба значения не являются числом';
     } else {
         return (a * b);
     }
 }
 
-alert(correctNumbers(a, b));*/
+alert(correctNumbers(a, b));
 
 //6 задание
 /*let n = Number(prompt('Введите первое число'));
