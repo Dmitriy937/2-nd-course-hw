@@ -58,7 +58,16 @@ console.log(revers);*/
 
 console.log(arr.flat());*/
 
-//10 задание - 1 решение
+//10 задание
+let random = Array.from({length: 7}, () => Math.floor(Math.random() * 10));
+let result = 0;
+
+for (let i = 0; i < random.length; i++) {
+  result += random[i];
+}
+
+console.log(result);
+
 /*let maxTicketNumber = 10;
 let minTicketNumber = 1;
 let ticketNumbers = Array(maxTicketNumber).fill(0);
@@ -69,20 +78,19 @@ ticketNumbers = ticketNumbers.map(_ => {
   return Math.round(randomValue)
 });
 
-function summArrayElements(ticketNumbers){
-    let x = 0;
-    return ticketNumbers.map(i => x += i, x).reverse()[0]
-  }
+let result = 0;
 
- console.log(summArrayElements(ticketNumbers));*/
+for (let i = 0; i < ticketNumbers.length; i++) {
 
-//10 задание - 2 решение
-/*let arr = [2, 3, 7, 8, 2, 4, 9];
+}*/
 
-let listSums = (array) => array.reduce((a,b) => [...a, a[a.length-1]+b], [0]).slice(2);
-let listAllSums = (array) => array.reduce((a, b, index) => [...a, ...listSums(array.slice(index))], []);
 
-console.log(listAllSums(arr));*/
+/*let sum = 0;
+
+for(key in ticketNumbers) {
+ticketNumbers[key] = sum += ticketNumbers[key];
+}
+console.log(ticketNumbers);*/
 
 //11 задание
 /*const numbers = [2, 4, 5];
