@@ -1,7 +1,6 @@
 @media (max-width: 767px) {
     .top {
         width: 375px;
-        height: 735px;
     }
 
     .header{
@@ -174,4 +173,36 @@
             }
         }
     }
+
+    .riddles {
+        &__title {
+            font-size: 32px;
+            line-height: 39px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin-top: 51px;
+        }
+
+        &__title-text {
+            font-size: 14px;
+            line-height: 22px;
+            display: flex;
+            text-align: center;
+            width: 343px;
+            margin-left: 12px;
+        }
+
+        &__button {
+            width: 234.06px;
+            height: 48.6px;
+            margin-left: 65px;
+            margin-bottom: 487px;
+        }
+    }
+    
+    .footer {
+        width: 375px;
+    }
+
 }

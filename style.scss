@@ -14,7 +14,6 @@ body {
 
 .top {
     width: 1440px;
-    height: 1024px;
 }
 
 .header {
@@ -283,6 +282,84 @@ body {
     }
 }
 
+.game-riddles {
+    background-image: url("img/game-riddles.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 800px;
+}
 
+.riddles {
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+
+    &__title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 59px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        color: #FFFFFF;
+        margin-top: 276px;
+    }
+
+    &__title-text {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 32px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+        width: 1200px;
+        margin-left: 120px;
+    }
+
+    &__button {
+        width: 234.06px;
+        height: 48.6px;
+        background: #9C0332;
+        border-radius: 30px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+        color: #FFFFFF;
+        justify-content: center;
+        margin-left: 608px;
+        &:hover {
+            background: #EB443F;
+        }
+    }
+}
+
+.footer {
+    background-image: url("img/footer.png");
+    height: 80px;
+    width: 1440px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__info {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFFFFF;
+        padding-top: 32px;
+    }
+}
 
 @import 'mobile';

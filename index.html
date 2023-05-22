@@ -26,7 +26,7 @@
             <div class="year">
                 <h2 class="year__time">Времена года!</h2>
                 <p class="year__time-text">Нажмите кнопку играть, введите номер месяца (от 1 до 12) и вы узнаете к какому времени года он относится</p>
-                <button class="year__button">Играть!</button>
+                <button class="year__button" type="submit" id="submit" onclick="monthOfYear();">Играть!</button>
             </div>
             <div class="logo-game"></div>
         </section>
@@ -35,9 +35,20 @@
             <div class="words">
                 <h2 class="words__remember">Запомни слова</h2>
                 <p class="words__remember-text">При нажатии на кнопку играть, вы увидите несколько слов, которые вам необходимо запомнить.</p>
-                <button class="words__button">Играть!</button>
+                <button class="words__button" type="submit" id="submit" onclick="rememberTheWords();>Играть!</button>
+            </div>
+        </section>
+        <section class="game-riddles">
+            <div class="riddles">
+                <h2 class="riddles__title">Игра в загадки</h2>
+                <p class="riddles__title-text">Компьютер загадывает загадку, вам необходимо ее угадать, если вы дадите не правильный ответ, то компьютер даст вам подсказку. У вас будет три попытки и две подсказки.</p>
+                <button class="riddles__button">Играть!</button>
             </div>
         </section>
     </div>
+    <footer class="footer">
+        <p class="footer__info">Все права защищены</p>
+    </footer>
+    <script src="HW-7-task-11.js"></script>
 </body>
 </html>
