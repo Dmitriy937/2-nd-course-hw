@@ -18,19 +18,16 @@ people.sort(function(a, b) {
 
 console.log(people.sort());*/
 
-//Задание 2 - не сделано
+//Задание 2
 /*const arr = [3, -4, 1, 9];
 
 function isPositive(arr) {
     return arr > 0;
 }
 
-function isMale(arrayPeople, key, keyValue) {
-    return arrayPeople.filter(item => item[key] === keyValue);
+function isMale(person) {
+    return person.gender === 'male';
 }
-
-let newPeople = isMale(people, 'gender', 'male');
-console.log(newPeople);
 
 function filter(arr, filterFunc) {
     return arr.filter(filterFunc)
@@ -45,7 +42,7 @@ const people = [
     {name: 'Оксана', gender: 'female'}
 ];
     
-//console.log(filter(people, isMale)); // Должен выводить [{name: 'Глеб', gender: 'male'},  {name: 'Олег', gender: 'male'}]*/
+console.log(filter(people, isMale));*/ // Должен выводить [{name: 'Глеб', gender: 'male'},  {name: 'Олег', gender: 'male'}]*/
 
 //Задание 3
 /*let timerId = setInterval(() => console.log(new Date()), 3000);
