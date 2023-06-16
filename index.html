@@ -137,18 +137,6 @@
 
   renderComments();
 
-  comment.push({
-    name: commentName.value
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;"),
-    comments: commentTextComment.value,
-  });
-
-  renderComments();
-
- 
   buttonElement.setAttribute('disabled', true);
 
   inputNameElement.addEventListener("input", () => {
