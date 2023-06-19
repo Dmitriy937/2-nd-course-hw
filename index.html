@@ -94,7 +94,7 @@
     
     const commentsHtml = comments.map((comment, index) => {
 
-    return `<li class="comment" id="comm-text" data-comments-id="${comment.textComment}">
+    return `<li class="comment" id="comm-text" data-element="${comment.textComment}">
           <div class="comment-header">
             <div>${comment.name}</div>
             <div>${comment.dateСreation}</div>
@@ -127,18 +127,34 @@
     for (const comment of commentsElements) {
       comment.addEventListener('click', () => {
 
-        const commentsId = commentsElements.dataset.commentsId; // чтение значения атрибута 
-        console.log(commentsId);
-
-        commentsElements.dataset.textComment = 'новый коментарий'; // изменение значения атрибута
-        console.log(commentsElements);
-        
+        const commentsId = comment.dataset.commentsId; // чтение значения атрибута 
+        console.log(commentsId);    
+        renderComments();
       })
       
     };
-  
 
+    renderComments();
 
+    const commentInputElement = document.getElementById("textComment"); // по id обратиться к элементу из массива данных comments
+
+    buttonElement.addEventListener("click", () => {
+      textInputElement.classList.remove("input-error");
+    if (textInputElement.value === "") {
+      textInputElement.classList.add("input-error");
+      return;
+    }
+  });
+
+    comments.push({
+      comment: inputTextElement.value // записать их в value поля ввода (inputTextElement). 
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;"),
+    });
+
+    renderComments();
   
   buttonElement.setAttribute('disabled', true);
 
