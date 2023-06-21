@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+           const fetchColor = fetch("https://webdev-hw-api.vercel.app/api/tasks/random-red", {
+    method: "GET",
+});
+
+    fetchColor.then((response) => {
+    
+      const jsonColor = response.json();
+     
+      jsonColor.then((responseData) => {
+      console.log(responseData);
+      const bodyElement = document.querySelector('body');
+      console.log(bodyElement);
+      bodyElement.style.backgraundColor = responseData;
+      console.log(responseData.color);
+      tasks = responseData.color;
+        renderTasks();
+      });
+    });
+    </script>
+</body>
+</html>
