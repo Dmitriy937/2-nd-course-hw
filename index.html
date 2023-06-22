@@ -235,7 +235,7 @@ const editButtonElements = document.querySelectorAll('.edit-button');
     }).then((response) => {
     response.json().then((responseData) => {
         comments = responseData.comments;
-        renderComments();
+      
       });
     });
 
@@ -248,15 +248,17 @@ const editButtonElements = document.querySelectorAll('.edit-button');
     });
 
     fetchPromiseDuble.then((response) => {
-    const jsonPromiseDuble = response.json();
+    const jsonPromise = response.json();
 
-    jsonPromiseDuble.then((responseData) => {
+    jsonPromise.then((responseData) => {
       console.log(responseData);
 
-      commentsDuble = responseData.comments; 
-      
+      comments = responseData.comments; 
+      renderComments();
     });
     }); 
+
+    renderComments(); 
 
     inputNameElement.value = "";
     inputTextElement.value = "";
