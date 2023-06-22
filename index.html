@@ -65,7 +65,7 @@
     jsonPromise.then((responseData) => {
       console.log(responseData);
 
-      comments = responseData.todos;
+      comments = responseData.comments;
       renderComments();
     });
   });
@@ -234,7 +234,7 @@ const editButtonElements = document.querySelectorAll('.edit-button');
       }),
     }).then((response) => {
     response.json().then((responseData) => {
-        comments = responseData.todos;
+        comments = responseData.comments;
         renderComments();
       });
     });
@@ -243,20 +243,20 @@ const editButtonElements = document.querySelectorAll('.edit-button');
 
     //--------------------------- Новый GET запрос --------------------------------
 
-    const fetchPromise = fetch("https://wedev-api.sky.pro/api/v1/shapovalov-dmitry/comments",{
+  const fetchPromiseDuble = fetch("https://wedev-api.sky.pro/api/v1/shapovalov-dmitry/comments",{
       method: 'GET',
     });
 
-    fetchPromise.then((response) => {
-    const jsonPromise = response.json();
+    fetchPromiseDuble.then((response) => {
+    const jsonPromiseDuble = response.json();
 
-    jsonPromise.then((responseData) => {
+    jsonPromiseDuble.then((responseData) => {
       console.log(responseData);
 
-      comments = responseData.todos;
-      renderComments();
+      commentsDuble = responseData.comments; 
+      
     });
-  });
+    }); 
 
     inputNameElement.value = "";
     inputTextElement.value = "";
