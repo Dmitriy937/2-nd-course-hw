@@ -91,7 +91,7 @@ fetchPromise.then((response) => {
             <button data-edit="${index}" class="edit-button">Редактировать</button>
             <div class="likes">
               <span class="likes-counter"> ${comment.likes}</span>
-              <button data-index="${index}" class="like-button -no-active-like"></button>
+              <button data-index="${index}" class="isLiked -no-active-like"></button>
             </div>
           </div>
         </li>`;
@@ -134,7 +134,7 @@ const editButtonElements = document.querySelectorAll('.edit-button');
 // --------- Получаем лайки ----------------------------
 
   function getLikeButton() {
-    const likesButton = document.querySelectorAll('.like-button');
+    const likesButton = document.querySelectorAll('.isLiked');
     for (const like of likesButton) {
       like.addEventListener("click", (event) => {
         event.stopPropagation();
