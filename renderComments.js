@@ -14,4 +14,4 @@ const renderComments = (comments, listComments) => {
 
 };
 
-export default renderComments;
+export default renderComments; 

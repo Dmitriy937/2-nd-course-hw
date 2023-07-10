@@ -5,3 +5,4 @@ export const getCurrentDate = (date) => {
       date.toLocaleTimeString().slice(0, -3);
 
   }
+ 

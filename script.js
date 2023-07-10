@@ -236,4 +236,4 @@ buttonElementDel.addEventListener("click", () => {
   renderComments(comments, getListComments)
   // const lastElement = commentsElement.lastElementChild;
   // lastElement.remove();
-});
+}); 

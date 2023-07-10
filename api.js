@@ -36,7 +36,7 @@ export const fetchPost = () => {
       forceError: true,
     })
   })
-    .then((response) => {
+    .then((response) => { 
       if (response.status === 500) {
         throw new Error("Сервер сломался");
       } else if (response.status === 400) {

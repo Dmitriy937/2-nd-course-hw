@@ -23,4 +23,4 @@ const getListComments = (comment, index) => {
         </li>`;
 }
 
-export {getListComments};
+export {getListComments}; 
