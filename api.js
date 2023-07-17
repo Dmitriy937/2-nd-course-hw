@@ -1,27 +1,30 @@
 import { getCurrentDate } from "./date.js";
-import { inputTextElement, inputNameElement } from "./script.js";
+
+const host = "https://wedev-api.sky.pro/api/v2/dmitri-shapovalov/comments/";
 
 export const fetchGet = () => {
-  return fetch("https://wedev-api.sky.pro/api/v1/dmitriy-shapovalov/comments", {
+  return fetch(host, {
     method: "GET",
-  }).
-    then((response) => {
+  })
+  .then((response) => {
+    if (response.status === 401) {
+      throw new Error("Нет авторизации");
+    } else  if (response.status === 500) {
+      throw new Error("Сервер сломался");
+    } else {
       return response.json();
-    })
+    }    
+  })
 }
 
 
 
 //отпраляем новые данные   
-export const fetchPost = () => {
-  return fetch("https://wedev-api.sky.pro/api/v1/dmitriy-shapovalov/comments", {
+export const fetchPost = (token,inputTextElement,inputNameElement) => {
+  return fetch(host, {
     method: "POST",
     body: JSON.stringify({
-      name: inputNameElement.value
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;"),
+      name: inputNameElement.value,
       date: getCurrentDate(new Date()),
       text: inputTextElement.value
         .replaceAll("&", "&amp;")
@@ -34,9 +37,12 @@ export const fetchPost = () => {
       likes: 0,
       propertyColorLike: 'like-button no-active-like',
       forceError: true,
-    })
+    }),
+    headers: {
+      Authorization: token,
+  }
   })
-    .then((response) => { 
+    .then((response) => {
       if (response.status === 500) {
         throw new Error("Сервер сломался");
       } else if (response.status === 400) {
@@ -46,4 +52,72 @@ export const fetchPost = () => {
       }
     })
 
+}
+
+//удаляем
+export function fetchDelete(token,id) {
+  return fetch(host + id, {
+      method: "DELETE",
+      headers: {
+        Authorization: token,
+      },
+    })
+      .then((response) => {
+        return response.json();
+      })
+}
+  
+export const loginUser = ({login, password}) => {
+  return fetch("https://wedev-api.sky.pro/api/user/login", {
+    method: "POST",
+    body: JSON.stringify({
+     login,
+     password
+    })
+  })
+    .then((response) => {
+      if (response.status === 500) {
+        throw new Error("Сервер сломался");
+      } else if (response.status === 400) {
+        throw new Error("Нет авторизации");
+      } else {
+        return response.json();
+      }
+    })
+
+}
+
+
+export const registernUser = ({login, password,name}) => {
+  return fetch("https://wedev-api.sky.pro/api/user", {
+    method: "POST",
+    body: JSON.stringify({
+     login,
+     password,
+     name,
+    })
+  })
+    .then((response) => {
+      if (response.status === 500) {
+        throw new Error("Сервер сломался");
+      } else if (response.status === 400) {
+        throw new Error("Такой пользователь уже существует");
+      } else {
+        return response.json();
+      }
+    })
+
+}
+
+
+//лайки
+export const toggleLike = ({id, token}) => {
+  return fetch(`https://wedev-api.sky.pro/api/v2/diana-semenova/comments/${id}/toggle-like`, {
+    method: "POST",
+    headers: {
+      Authorization: token,
+    },
+  }).then((response) => {
+    return response.json();
+  });
 }
