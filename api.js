@@ -1,6 +1,6 @@
 import { getCurrentDate } from "./date.js";
 
-const host = "https://wedev-api.sky.pro/api/v2/dmitri-shapovalov/comments/";
+const host = "https://wedev-api.sky.pro/api/v2/diana-semenova/comments/";
 
 export const fetchGet = () => {
   return fetch(host, {
@@ -66,7 +66,8 @@ export function fetchDelete(token,id) {
         return response.json();
       })
 }
-  
+
+//https://github.com/GlebkaF/webdev-hw-api/blob/main/pages/api/user/README.md   
 export const loginUser = ({login, password}) => {
   return fetch("https://wedev-api.sky.pro/api/user/login", {
     method: "POST",
