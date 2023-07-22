@@ -1,6 +1,6 @@
 import { getCurrentDate } from "./date.js";
 
-const host = "https://wedev-api.sky.pro/api/v2/diana-semenova/comments/";
+const host = "https://wedev-api.sky.pro/api/v2/dmitriy-shapovalov/comments/";
 
 export const fetchGet = () => {
   return fetch(host, {
@@ -113,7 +113,7 @@ export const registernUser = ({login, password,name}) => {
 
 //лайки
 export const toggleLike = ({id, token}) => {
-  return fetch(`https://wedev-api.sky.pro/api/v2/diana-semenova/comments/${id}/toggle-like`, {
+  return fetch(`https://wedev-api.sky.pro/api/v2/dmitriy-shapovalov/comments/${id}/toggle-like`, {
     method: "POST",
     headers: {
       Authorization: token,
